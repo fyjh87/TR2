@@ -104,7 +104,7 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（默认启用）
 
-    max_age_days: 5                   # 最大文章年龄（天）
+    max_age_days: 60                   # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -351,11 +351,11 @@ ai:
   # 完整列表: https://docs.litellm.ai/docs/providers
   # 如果你对于看英文文档比较头疼，那么可以点击页面右下角的 【Ask AI】 ,用中文询问怎么配置 
   
-  model: "dashscope/qwen-tubo"
+  model: "dashscope/qwen3-vl-plus"
 
   api_key: "sk-96df881d3fca4610a04d7e1a1d7df78a"                       # API Key（建议使用环境变量 AI_API_KEY）
   
-  api_base: "https://dashscope.aliyuncs.com/compatible-mode/v1"                      # 自定义 API 端点（可选，大多数情况留空）
+  api_base: "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"                      # 自定义 API 端点（可选，大多数情况留空）
                                     # 示例: https://api.openai.com/v1（自建代理或兼容接口）
                                     #
                                     # 💡 超级重要：连接任意兼容 OpenAI 协议的模型商
